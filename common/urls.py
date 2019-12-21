@@ -18,7 +18,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-from django.conf.urls import url, include
+from django.conf.urls import *
+from django.contrib import admin
 from common import views
 
 urlpatterns = [

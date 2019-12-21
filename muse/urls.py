@@ -18,13 +18,14 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-from django.conf.urls import patterns, include, url
+from django.conf.urls import *
+from django.contrib import admin
 from django.views.generic import TemplateView
 from django.conf import settings
 from views import about
 
 
-urlpatterns = patterns(
+urlpatterns = (
     '',
     url(r'^$', about, name='about'),
     url(r'^auth/', include('security.urls', namespace="auth")),

@@ -18,10 +18,10 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-from django.conf.urls import patterns, url
+from django.conf.urls import *
 from components.views import ComponentGallery, ComponentOverview
 
-urlpatterns = patterns(
+urlpatterns = (
     '',
     url(r'^$', ComponentOverview.as_view(), name="overview"),
     url(r'^gallery/', ComponentGallery.as_view(), name='gallery'),

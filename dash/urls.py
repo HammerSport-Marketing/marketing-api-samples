@@ -19,7 +19,7 @@
 # SOFTWARE.
 
 import logging
-from django.conf.urls import patterns, url
+from django.conf.urls import *
 from dash.views.sample import SampleCreateView, SampleUpdateView
 from dash.views.sample import SampleDetailView, SampleListView
 from dash.views.sample import SampleDeleteView
@@ -34,7 +34,7 @@ if hasattr(settings, 'ENABLE_DASH') \
    and settings.ENABLE_DASH \
    and not settings.IS_RELEASE() \
    and not settings.IS_TEST():
-    urlpatterns = patterns(
+    urlpatterns = (
         '',
         url(r'^sample/add/$', SampleCreateView.as_view(), name='sample_add'),
         url(r'^sample/list/$', SampleListView.as_view(), name='sample_list'),

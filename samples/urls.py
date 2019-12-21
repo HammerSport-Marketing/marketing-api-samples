@@ -18,11 +18,11 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-from django.conf.urls import patterns, url
+from django.conf.urls import *
 from samples.views import sample
 
 
-urlpatterns = patterns(
+urlpatterns = (
     '',
     url(r'^(?P<sid>\w+)$', sample.SampleView.as_view(), name='sample'),
     url(r'^', sample.SampleCatalog.as_view(), name='index'))
